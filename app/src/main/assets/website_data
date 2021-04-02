@@ -1,0 +1,49 @@
+﻿{
+	"list": [{
+			"name": "腾讯视频",
+			"icon": "http://img.sogoucdn.com/app/a/100540020/85a3a8ad16780fa132d35d83fdbb4b16.png",
+			"url": "https://v.qq.com/",
+			"prefix": [
+				"https://v.qq.com/x/cover/",
+				"https://m.v.qq.com/x/"
+			]
+		},
+		{
+			"name": "爱奇艺",
+			"icon": "http://img.sogoucdn.com/app/a/100540020/59890eed0aefff5863102144d1a3c01f.png",
+			"url": "https://www.iqiyi.com/",
+			"prefix": [
+				"https://www.iqiyi.com/v",
+				"https://m.iqiyi.com/v"
+			]
+		},
+		{
+			"name": "优酷视频",
+			"icon": "http://img.sogoucdn.com/app/a/100540020/badb0f3c371fe993370594d018ceda41.png",
+			"url": "https://www.youku.com/",
+			"prefix": [
+				"https://v.youku.com/v_show",
+				"https://m.youku.com/alipay_video"
+			]
+		},
+		{
+			"name": "搜狐视频",
+			"icon": "http://img.sogoucdn.com/app/a/100540020/2da884d12d2eefbee8a3df9a386898db.png",
+			"url": "https://tv.sohu.com/",
+			"prefix": [
+				"https://film.sohu.com/album/",
+				"https://tv.sohu.com/v/",
+				"https://m.tv.sohu.com/phone_play_film"
+			]
+		},
+		{
+			"name": "芒果TV",
+			"icon": "http://img.sogoucdn.com/app/a/100540020/d177c494f8727b92de3e207f5c7fda3a.png",
+			"url": "https://m.mgtv.com/channel/home",
+			"prefix": [
+				"https://www.mgtv.com/b",
+				"https://m.mgtv.com/b"
+			]
+		}
+	]
+}

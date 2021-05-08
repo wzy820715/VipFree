@@ -10,8 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.demo.vipfree.R
-import com.demo.vipfree.ui.WebActivity
 import com.demo.vipfree.model.WebsiteInfo
+import com.demo.vipfree.ui.WebActivity
 
 class WebsiteListAdapterOld() : RecyclerView.Adapter<WebsiteListAdapterOld.ItemViewHolder>() {
 

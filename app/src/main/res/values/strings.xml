@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VipFree</string>
+    <string name="transition_layout_name">tranLayout</string>
 </resources>

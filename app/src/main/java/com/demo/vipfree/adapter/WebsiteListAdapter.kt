@@ -1,17 +1,20 @@
 package com.demo.vipfree.adapter
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.demo.vipfree.R
-import com.demo.vipfree.ui.WebActivity
-import com.demo.vipfree.model.WebsiteInfo
 import com.demo.vipfree.databinding.LayoutItemWebsiteBinding
+import com.demo.vipfree.model.WebsiteInfo
+import com.demo.vipfree.ui.WebActivity
 
 class WebsiteListAdapter : ListAdapter<WebsiteInfo, WebsiteListAdapter.ItemViewHolder>(REPO_COMPARATOR)  {
 
@@ -39,12 +42,16 @@ class WebsiteListAdapter : ListAdapter<WebsiteInfo, WebsiteListAdapter.ItemViewH
 
         init {
             itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, WebActivity::class.java)
-                    var bundle = Bundle()
-                    bundle.putParcelable("info",info)
-                    intent.putExtras(bundle)
-                    itemView.context.startActivity(intent)
-                }
+                val intent = Intent(itemView.context, WebActivity::class.java)
+                var bundle = Bundle()
+                bundle.putParcelable("info",info)
+                intent.putExtras(bundle)
+//                    itemView.context.startActivity(intent)
+                val activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    itemView.context as Activity, binding.layoutIcon,
+                    itemView.context.getString(R.string.transition_layout_name))
+                ActivityCompat.startActivity(itemView.context, intent, activityOptions.toBundle())
+            }
         }
 
         fun bindData(info: WebsiteInfo){

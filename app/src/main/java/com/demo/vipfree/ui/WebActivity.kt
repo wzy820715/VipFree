@@ -6,6 +6,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
+import android.transition.ChangeBounds
 import android.view.KeyEvent
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
@@ -14,8 +15,8 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
-import com.demo.vipfree.model.WebsiteInfo
 import com.demo.vipfree.databinding.ActivityWebBinding
+import com.demo.vipfree.model.WebsiteInfo
 import com.demo.vipfree.utils.UiUtils
 
 class WebActivity : AppCompatActivity() {
@@ -47,6 +48,8 @@ class WebActivity : AppCompatActivity() {
                 mPrefix = webInfo.prefix
             }
         }
+        val bounds = ChangeBounds()
+        window.sharedElementEnterTransition = bounds
         initWebView()
     }
 
